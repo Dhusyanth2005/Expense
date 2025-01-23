@@ -3,12 +3,12 @@ const { v4: uuidv4 } = require('uuid');
 const mongoose = require('mongoose');
 const app = express()
 const port = 3000
-const mongourl = "mongodb://localhost:27017";
+const mongourl = "mongodb+srv://Dhusyanth:dhusyanth20@cluster0.0xp5g.mongodb.net/expenseTracker";
 mongoose
     .connect(mongourl)
     .then(()=>{
         app.listen(port,()=>{
-            console.log("server is running on port 3000")
+            console.log("server is running on port",port)
         })
     })
     const expenseSchema = new mongoose.Schema({
